@@ -2,6 +2,7 @@
 #include <assert.h>
 #include <vector>
 #include <tuple>
+#include <string>
 
 std::vector<std::tuple<int, const char*, const char*>> generateColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
@@ -24,8 +25,8 @@ void printColorMap(const std::vector<std::tuple<int, const char*, const char*>>&
 int main() {
     auto colorMap = generateColorMap();
     printColorMap(colorMap);
-    for(int i = 0; i < colorMap.size(); i++) {
-        assert(std::get<2>(colorMap[i]) != "Blue");
+    for(std::vector::size_type i = 0; i < colorMap.size(); i++) {
+        assert(std::string(std::get<2>(colorMap[i])) != "Blue");
     }
     std::cout << "All is well (maybe!)\n";
     return 0;
