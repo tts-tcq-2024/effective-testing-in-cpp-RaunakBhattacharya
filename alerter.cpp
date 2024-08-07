@@ -26,7 +26,7 @@ void alertInCelcius(float farenheit) {
 int main() {
     alertInCelcius(400.5); // This will simulate a failure
     alertInCelcius(303.6); // This will also simulate a failure
-    assert(alertFailureCount == 0); // This will fail because alertFailureCount should be 2
+    assert(alertFailureCount == 2); // This will fail because alertFailureCount is 0
     std::cout << alertFailureCount << " alerts failed.\n";
     std::cout << "All is well (maybe!)\n";
     return 0;
