@@ -25,7 +25,7 @@ void printColorMap(const std::vector<std::tuple<int, const char*, const char*>>&
 int main() {
     auto colorMap = generateColorMap();
     printColorMap(colorMap);
-    for(std::vector::size_type i = 0; i < colorMap.size(); i++) {
+    for(size_t i = 0; i < colorMap.size(); i++) {
         assert(std::string(std::get<2>(colorMap[i])) != "Blue");
     }
     std::cout << "All is well (maybe!)\n";
