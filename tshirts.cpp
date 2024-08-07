@@ -17,6 +17,8 @@ int main() {
     assert(size(37) == 'S');
     assert(size(40) == 'M');
     assert(size(43) == 'L');
+    assert(size(38) == 'M'); // This will fail because size(38) returns '\0'
+    assert(size(42) == 'L'); // This will fail because size(42) returns '\0'
     std::cout << "All is well (maybe!)\n";
     return 0;
 }
